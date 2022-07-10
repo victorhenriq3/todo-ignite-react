@@ -1,0 +1,28 @@
+.empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty p{
+    color: var(--gray-300);
+    font-weight: bold;
+    line-height: 22.4px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.empty span{
+    color: var(--gray-300);
+    line-height: 22.4px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.empty img{
+    margin-bottom: 16px;
+    margin-top: 64px;
+    width: 56px;
+    height: 56px;
+}

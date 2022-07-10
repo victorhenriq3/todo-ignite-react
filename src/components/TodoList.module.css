@@ -47,3 +47,28 @@
     margin-left: 0.5rem;
     padding: 2px 8px;
 }
+
+
+.todo_content{
+    border-top: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+.todo_list{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--gray-400);
+    justify-content: space-between;
+    padding: 16px;
+    gap: 12px;
+    border: 1px solid var(--gray-500);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+}
+
+.todo_list span{
+    color: white;
+    line-height: 140%;
+    color: var(--gray-100);
+    font-size: 0.875rem;
+}
