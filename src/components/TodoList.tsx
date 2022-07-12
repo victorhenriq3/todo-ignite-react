@@ -2,15 +2,20 @@ import { useState } from 'react'
 import { Empty } from './Empty'
 import { Trash } from "phosphor-react"
 import styles from './TodoList.module.css'
+import { Todo } from '../App'
 
-export function TodoList(){
-    const [todos, setTodos] = useState(['a'])
+interface TodoListProps {
+    todos: Todo[]
+}
+
+export function TodoList({todos}:TodoListProps){
+
     return (
         <div className={styles.todo_container}>
             <div className={styles.todo_header}>
                 <div className={styles.todo_create}>
                     Tarefas Criadas 
-                    <span>0</span>
+                    <span>{todos.length}</span>
                 </div>
         
                 <div className={styles.todo_finishes}>
@@ -21,13 +26,15 @@ export function TodoList(){
 
             <div className={styles.todo_content}>
                 {todos.length > 0 ? (
-                    <div className={styles.todo_list}>
-                       <input type="checkbox" />
+                    todos.map(todo => (
+                        <div className={styles.todo_list} key={todo.content}>
+                            <input type="checkbox" />
 
-                       <span>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames </span>
+                            <span>{todo.content}</span>
 
-                       <Trash size={24}/>
-                    </div>
+                            <Trash size={24}/>
+                        </div>
+                    ))
                 ) : (
                     <Empty />
                 )}
