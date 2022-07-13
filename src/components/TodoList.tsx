@@ -6,9 +6,10 @@ import { Todo } from '../App'
 
 interface TodoListProps {
     todos: Todo[]
+    checkTodo: (todo: Todo) => void
 }
 
-export function TodoList({todos}:TodoListProps){
+export function TodoList({todos, checkTodo}:TodoListProps){
 
     return (
         <div className={styles.todo_container}>
@@ -27,11 +28,10 @@ export function TodoList({todos}:TodoListProps){
             <div className={styles.todo_content}>
                 {todos.length > 0 ? (
                     todos.map(todo => (
-                        <div className={styles.todo_list} key={todo.content}>
-                            <input type="checkbox" />
+                        <div className={!todo.check ? styles.todo_list : styles.todo_list_check} key={todo.content}>
+                            <input type="checkbox" checked={todo.check} onChange={() => checkTodo(todo)}/>
 
                             <span>{todo.content}</span>
-
                             <Trash size={24}/>
                         </div>
                     ))

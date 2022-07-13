@@ -19,7 +19,9 @@ function App() {
   } 
 
   function checkTodo(todo: Todo) {
-    const findTodo = todos.find(td => td.content === todo.content)
+    const findTodo = todos.map(td => td.content === todo.content ? {...todo, check: !todo.check} : td)
+
+    setTodos(findTodo)
   }
 
   function addTodo(){
@@ -41,7 +43,7 @@ function App() {
       <Input handleChange={handleNewTodo} onAddTodo={addTodo} newTodo={newTodo}/>
 
       <div className='todoList'>
-        <TodoList todos={todos}/>
+        <TodoList todos={todos} checkTodo={checkTodo}/>
       </div>
     </div>
   )

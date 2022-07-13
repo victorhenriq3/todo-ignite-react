@@ -68,8 +68,27 @@
     margin-bottom: 12px;
 }
 
+.todo_list_check{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--gray-400);
+    justify-content: space-between;
+    padding: 16px;
+    gap: 12px;
+    border: 1px solid var(--gray-500);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.todo_list_check span{
+    color: var(--gray-300);
+    text-decoration-line: line-through;
+    line-height: 140%;
+    font-size: 0.875rem;
+}
+
 .todo_list span{
-    color: white;
     line-height: 140%;
     color: var(--gray-100);
     font-size: 0.875rem;
