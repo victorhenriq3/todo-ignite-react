@@ -94,6 +94,19 @@
     font-size: 0.875rem;
 }
 
+.todo_trash svg{
+    cursor: pointer;
+    color: var(--gray-300);
+    
+}
+
+.todo_trash svg:hover{
+    cursor: pointer;
+    color: var(--danger);
+    transition: 0.4s;
+}
+
+
 .todo_list input[type="checkbox"]::before{
     background-color: transparent;
     width: 24px;

@@ -24,6 +24,12 @@ function App() {
     setTodos(findTodo)
   }
 
+  function removeTodo(todo: Todo){
+    const findTodo = todos.filter(td => td.content !== todo.content)
+
+    setTodos(findTodo)
+  }
+
   function addTodo(){
 
     const newState = {
@@ -43,7 +49,7 @@ function App() {
       <Input handleChange={handleNewTodo} onAddTodo={addTodo} newTodo={newTodo}/>
 
       <div className='todoList'>
-        <TodoList todos={todos} checkTodo={checkTodo}/>
+        <TodoList todos={todos} checkTodo={checkTodo} removeTodo={removeTodo}/>
       </div>
     </div>
   )

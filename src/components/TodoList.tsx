@@ -7,9 +7,10 @@ import { Todo } from '../App'
 interface TodoListProps {
     todos: Todo[]
     checkTodo: (todo: Todo) => void
+    removeTodo: (todo: Todo) => void
 }
 
-export function TodoList({todos, checkTodo}:TodoListProps){
+export function TodoList({todos, checkTodo, removeTodo}:TodoListProps){
 
     return (
         <div className={styles.todo_container}>
@@ -32,7 +33,10 @@ export function TodoList({todos, checkTodo}:TodoListProps){
                             <input type="checkbox" checked={todo.check} onChange={() => checkTodo(todo)}/>
 
                             <span>{todo.content}</span>
-                            <Trash size={24}/>
+
+                            <div className={styles.todo_trash}>
+                                <Trash size={20}  onClick={() => removeTodo(todo)}/>
+                            </div>
                         </div>
                     ))
                 ) : (
