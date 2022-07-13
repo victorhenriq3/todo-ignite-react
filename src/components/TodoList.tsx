@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Empty } from './Empty'
 import { Trash } from "phosphor-react"
 import styles from './TodoList.module.css'

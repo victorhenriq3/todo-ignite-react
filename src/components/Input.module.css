@@ -12,13 +12,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
 
     width: 638px;
     height: 54px;
 
     border: 1px solid var(--gray-700);
-    border-radius: 8px;
+    border-radius: 0.5rem;
 
     color: white;
 }
@@ -35,8 +35,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2px;
-    padding: 16px;
+    gap: 0.125rem;
+    padding: 1rem;
 
     margin-left: 0.5rem;
 
@@ -44,7 +44,7 @@
     height: 52px;
 
     border: none;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     
     cursor: pointer;
 

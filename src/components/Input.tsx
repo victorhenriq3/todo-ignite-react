@@ -1,7 +1,6 @@
 import styles from './Input.module.css'
 import {PlusCircle} from "phosphor-react"
 import React from 'react'
-import { Todo } from '../App'
 
 interface InputProps{
     handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
