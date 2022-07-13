@@ -40,7 +40,7 @@
 
 .todo_finishes span{
     background-color: var(--gray-400);
-    border-radius: 50%;
+    border-radius: 999px;
     width: 25px;
     height: 19px;
 

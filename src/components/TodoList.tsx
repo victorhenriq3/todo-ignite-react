@@ -22,7 +22,11 @@ export function TodoList({todos, checkTodo, removeTodo}:TodoListProps){
         
                 <div className={styles.todo_finishes}>
                     Concluídas
-                    <span>0</span>
+                    {todos.length > 0 
+                        ? <span>{todos.filter(td => td.check === true).length} de {todos.length}</span>
+                        : <span>{todos.filter(td => td.check === true).length}</span>
+                    }
+                    
                 </div>
             </div>
 
