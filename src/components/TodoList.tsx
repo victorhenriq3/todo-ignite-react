@@ -33,7 +33,11 @@ export function TodoList({todos, checkTodo, removeTodo}:TodoListProps){
                 {todos.length > 0 ? (
                     todos.map(todo => (
                         <div className={!todo.check ? styles.todo_list : styles.todo_list_check} key={todo.content}>
-                            <input type="checkbox" checked={todo.check} onChange={() => checkTodo(todo)}/>
+                            
+                            <div className={styles.input_check}>
+                                <input type="checkbox" checked={todo.check} onChange={() => checkTodo(todo)} id="checkbox"/>
+                                <label htmlFor="checkbox"></label>
+                            </div>
 
                             <span>{todo.content}</span>
 
